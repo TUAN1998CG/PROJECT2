@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dddddd;}
+  </style>
+</head>
+<body>
+<h3>Market Research Survey</h3>
+<h7>Please take a few moments to complete this satisfaction survey.</h7>
+<p>What is your are range?</p>
+<select>
+  <option>18-24</option>
+  <option>25-34</option>
+  <option>35-50</option>
+  <option>50+</option>
+</select>
+<p>Gender Identity</p>
+<input type="radio" name="Gender">Male
+<input type="radio" name="Gender">Female
+<input type="radio" name="Gender">Nonbinary
+<input type="radio" name="Gender">Other
+<input type="text">
+<p>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+<input type="checkbox">Product1
+<input type="checkbox">Product2
+<input type="checkbox">Product3
+<p>How often would you use our new product?</p>
+<input type="checkbox">Daily
+<input type="checkbox">Weekly
+<input type="checkbox">Monthly
+<p>What would you pay for the new product?</p>
+$<input type="text" size="6">.<input type="text" size="1">
+<p>Dollar</p>
+<p>What feartures would you like to see in the new product</p>
+<textarea cols="50" rows="5"></textarea>
+<p>Please rate your level of agreement with the following statements</p>
+<table class="table table-striped-columns ">
+  <tr>
+    <td></td>
+    <td>Strongly Disagree</td>
+    <td>Disagree</td>
+    <td>Agree</td>
+    <td>Strongly Agree</td>
+  </tr>
+  <tr>
+    <td>Our products are priced fairly.</td>
+    <td><input type="radio" name="stt">1</td>
+    <td><input type="radio" name="stt">2</td>
+    <td><input type="radio" name="stt">3</td>
+    <td><input type="radio" name="stt">4</td>
+  </tr>
+  <tr>
+    <td>Our products are high quality.</td>
+    <td><input type="radio" name="stt">1</td>
+    <td><input type="radio" name="stt">2</td>
+    <td><input type="radio" name="stt">3</td>
+    <td><input type="radio" name="stt">4</td>
+  </tr>
+  <tr>
+    <td>You would recommend our product to a friend or coworker.</td>
+    <td><input type="radio" name="stt">1</td>
+    <td><input type="radio" name="stt">2</td>
+    <td><input type="radio" name="stt">3</td>
+    <td><input type="radio" name="stt">4</td>
+  </tr>
+  <tr>
+   <td><button type="submit">Submit</button></td>
+  </tr>
+</table>
+</body>
+</html>
