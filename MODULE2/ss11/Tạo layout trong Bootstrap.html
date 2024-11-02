@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        header {
+            position: relative;
+        }
+        .shopping-mall{
+            position: absolute;
+            bottom: 20px;
+            font-variant: small-caps;
+        }
+        .shopping-mall>h1{
+            font-family: Impact;
+            font-size: 50px;
+            color: white;
+            letter-spacing: 0.3px;
+            text-shadow: 0 0 2px black;
+            padding-bottom: 0px;
+            border-bottom: 1px dotted gray;
+            margin: 0px;
+        }
+        .shopping-mall>h5 {
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+        .poly-cart{
+            margin-top: 5px;
+        }
+
+        .poly-cart ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            font-variant: small-caps;
+        }
+
+        .poly-cart .panel-heading strong {
+            font-variant: small-caps;
+            font-size: larger;
+            text-shadow: 0 0 2px darkgray;
+        }
+        .poly-prod{
+            text-align:center;
+            padding:5px;
+        }
+
+        .poly-prod .panel-body img{
+            height: 150px;
+            max-width: 95%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container  style=height:auto">
+    <header class="row">
+        <div class="shopping-mall">
+            <h1>Online shopping mall</h1>
+            <h5>The center point of the professional programming</h5>
+        </div>
+        <img class = "pull-right" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnNAiXAMOYUofNVHQlwKw6Xk49f-xF3GztIw&s"/>
+    </header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"> </span> Trang chủ</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Giới Thiệu</a></li>
+                    <li><a href="#"><span  class="glyphicon glyphicon-earphone"></span> Liên hệ</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Hỏi đáp</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Tài khoản</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Quên mật khẩu</a></li>
+                            <li><a href="#">Đăng ký thành viên</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Đăng xuất</a></li>
+                            <li><a href="#">Đổi mật khẩu</a></li>
+                            <li><a href="#">Cập nhật hồ sơ</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Đơn hàng</a></li>
+                            <li><a href="#">Hàng đã mua</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="row">
+<article class="col-sm-9">
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                    Nokia
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1LDH0dUasFjomURe41iPTdlZL2SrkN9-fNQ&s" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 100.25
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                    BlackBerry
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://thegioiblackberry.com.vn/thegioiblackberry-com-vn/2019/08/blackberry-moi-nhat-1.jpg" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 105.25
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                    SonyXperia
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://caremobile.vn/wp-content/uploads/2017/11/sony-xperia-xa1-ultra.jpg" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 103.25
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                    HTC
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://nld.mediacdn.vn/thumb_w/698/2017/htc-u11-ocean-solar-red-1494995823737.jpg" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 102.5
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                   SAMSUNG
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://images.samsung.com/is/image/samsung/p6pim/ph/sm-a356elbgphl/gallery/ph-galaxy-a35-5g-sm-a356-sm-a356elbgphl-thumb-540211956" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 99.8
+            </div>
+        </div>
+    </div>
+    <div class = "col-sm-4 poly-prod">
+        <div class = "panel panel-default">
+            <div class = "panel-heading">
+                <h4 class = "panel-title">
+                    XIAOMI
+                </h4>
+            </div>
+            <div class = "panel-body">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDUfCSvwf9SyF30YBvG63baTn4mfj8uCUADA&s" height="228" width="292"/></div>
+            <div class = "panel-footer">
+                $ 99.25
+            </div>
+        </div>
+    </div>
+
+</article>
+            <aside class="col-sm-3">
+                <div class="poly-cart">
+                    <div class="panel panel-default">
+<div class="panel-body">
+    <img class="col-sm-5" src="https://img.freepik.com/free-vector/shopping-cart-realistic_1284-6011.jpg"/>
+    <ul class="col-sm-7">
+        <li>100 items</li>
+        <li>$56.8</li>
+        <li><a href="#">Xem giỏ hàng</a></li>
+    </ul>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form>
+                <input placeholder="Keywords" class="form-control"/>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-th-list"></span> <strong>Chủng loại</strong>
+        </div>
+        <div class="list-group">
+            <a href="#" class="list-group-item">Điện thoại di động</a>
+            <a href="#" class="list-group-item">Máy tính xách tay</a>
+            <a href="#" class="list-group-item">Máy tính để bàn</a>
+            <a href="#" class="list-group-item">Quạt máy</a>
+            <a href="#" class="list-group-item">Tivi</a>
+            <a href="#" class="list-group-item">Tủ lạnh</a>
+
+        </div>
+
+    </div>
+
+</div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    <footer class="panel panel-default">
+        <div class="panel-heading text-center">
+            <p>CodeGym &copy; 2017</p>
+        </div>
+
+    </footer>
+
+
+</div>
+
+</body>
+</html>

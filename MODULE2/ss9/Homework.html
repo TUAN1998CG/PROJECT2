@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 100px 1fr;
+            grid-gap: 10px;
+        }
+
+        .header {
+            background-color: #E7E9EB;
+            line-height: 100px;
+            text-align: center;
+            grid-column: 1/4;
+        }
+
+        .navigation {
+
+            grid-column: 1/4;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: orange;
+            overflow: hidden;
+        }
+
+        .navigation ul li {
+            float: left;
+        }
+
+        .navigation ul li a {
+            color: #fff;
+            display: inline-block;
+            padding: 16px 18px;
+            text-decoration: none;
+        }
+
+        .navigation ul li a:hover, .navigation ul li a.active {
+            background-color: orangered;
+        }
+
+        .sidebar {
+            background-color: #282A35;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            color: #fff;
+
+
+        }
+
+        .content {
+            background-color: greenyellow;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+
+        }
+
+        .footer {
+            background-color: #E7E9EB;
+            line-height: 100px;
+            text-align: center;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+
+<body>
+<div class="grid-container">
+    <div class="header">Header</div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+
+</html>

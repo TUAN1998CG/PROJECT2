@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Đây là CSS của thẻ nav-menu*/
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: red;
+    height: 100%;
+    width: 300px;
+    z-index: 9999;
+}
+
+.nav-top {
+    color: white;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    margin-top: 100px;
+    padding-left: 30px;
+
+}
+
+.nav-hr {
+    padding-left: 30px;
+    padding-top: 60px;
+
+}
+
+.nav-hr .nav-hr-a {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+.nav-hr-a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Đây là CSS của thẻ content*/
+.content {
+    margin-left: 360px;
+    margin-right: 40px;
+    margin-top: 100px;
+}
+
+.content-ins span {
+    font-weight: bolder;
+    font-size: 64px;
+}
+
+.text-content span {
+    font-size: 48px;
+    color: red;
+}
+
+.text-pre {
+    font-size: 20px;
+}
+
+.content-header-1 {
+    margin-top: 60px;
+}
+
+.content-header-2 {
+    margin-top: 90px;
+}
+
+.content-header-3 {
+    margin-top: 90px;
+}
+
+.content-header-4 {
+    margin-top: 60px;
+}
+
+hr {
+    width: 50px;
+    border: 5px solid red;
+    border-radius: 4px;
+    margin: 20px 0;
+    box-sizing: content-box;
+}
+
+/*Đây là CSS của thẻ img-group*/
+.img-group {
+    display: grid;
+    grid-template-columns: 550px 550px;
+    column-gap: 15px;
+
+}
+
+.img-left img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+
+.img-right img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*.img-left img:hover {*/
+/*    opacity: 1;*/
+/*}*/
+/*.img-right img:hover{*/
+/*    opacity: 1;*/
+/*}*/
+
+/*Đây là CSS của thẻ desginers-people*/
+.designers-people {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-gap: 20px;
+}
+
+.avatar img {
+    height: 250px;
+    width: 100%;
+}
+
+.avatar {
+    background-color: #cbcbe6;
+}
+
+.infomation {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.text-opa {
+    opacity: 0.5;
+}
+
+/*Đây là CSS của thẻ table-package*/
+.table-package {
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-gap: 20px;
+
+}
+
+.ul-tb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.li-cs {
+    padding-top: 16px;
+!important;
+    padding-bottom: 16px;
+!important;
+    background-color: #f1f1f1;
+    font-size: 18px;
+}
+
+.li-cs-1 {
+    color: white;
+    background-color: #616161;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 24px;
+}
+
+.li-cs-1-red {
+    color: white;
+    background-color: red;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 24px;
+
+}
+
+ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 16px;
+}
+
+.btn {
+    background-color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-red {
+    color: white;
+    background-color: red;
+    padding: 12px 24px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-red:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Đây là CSS của thẻ form-login*/
+.form-login input {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+}
+
+.btn-last {
+    width: 100%;
+    padding: 12px 24px;
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+.btn-last:hover {
+    background-color: rgba(96, 100, 108, 0.99);
+    color: black;
+}
+
+
+/*.img-1 img {*/
+/*    position: relative;*/
+/*    transition: all .5s;*/
+/*}*/
+/*.title-text {*/
+/*    color: red;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    opacity: 0;*/
+/*    font-size: 28px;*/
+/*    transition: all .8s;*/
+/*}*/
+/*.img-1:hover .title-text {*/
+/*  transform: translate(-100%,-60%);*/
+/*    opacity: 2;*/
+/*}*/
+/*.img-1:hover img{*/
+/*    filter: blur(1.5px)brightness(85%);*/
+
+/*}*/
+
+header.menu {
+    display: none;
+}
+
+.nav-top .close {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    header.menu {
+        display: block;
+        padding: 10px 16px;
+        background-color: red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-top .close {
+        display: block;
+        font-size: 28px;
+    }
+
+
+    .nav-menu {
+        display: none;
+    }
+
+    .content {
+        margin: 60px 10px;
+
+    }
+
+    .content-ins span {
+        font-size: 64px;
+    }
+
+    .text-content span {
+        font-size: 48px;
+    }
+
+    .img-group {
+        display: grid;
+        grid-template-columns: auto ;
+        column-gap: 15px;
+    }
+
+    .designers-people {
+        display: grid;
+        grid-template-columns: auto;
+        column-gap: 15px;
+    }
+
+    .table-package {
+        display: grid;
+        grid-template-columns: auto;
+        column-gap: 15px;
+    }
+}
+

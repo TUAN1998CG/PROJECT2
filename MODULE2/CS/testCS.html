@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <style>-->
+<!--        #overlay {-->
+<!--            position: fixed;-->
+<!--            display: none;-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--            top: 0;-->
+<!--            left: 0;-->
+<!--            right: 0;-->
+<!--            bottom: 0;-->
+<!--            background-color: black;-->
+<!--            z-index: 2;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        #img{-->
+<!--            position: absolute;-->
+<!--            top: 50%;-->
+<!--            left: 50%;-->
+<!--            font-size: 50px;-->
+<!--            color: white;-->
+<!--            transform: translate(-50%,-50%);-->
+<!--            -ms-transform: translate(-50%,-50%);-->
+<!--        }-->
+<!--       .test img {-->
+<!--           width: 30%;-->
+<!--       }-->
+<!--    </style>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .w3-modal{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            z-index: 3;
+        }
+        .w3-image {
+            max-width: 100%;
+            height: auto}
+    </style>
+</head>
+<body>
+<!--<div id="overlay" onclick="off()">-->
+<!--    <div id="img">-->
+<!--        <img src="https://khachsandep.vn/storage/files/Homestay/thiet-ke-homestay-02.jpeg">-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div style="padding:20px" class="test">-->
+<!--&lt;!&ndash;    <h2>Overlay with Text</h2>&ndash;&gt;-->
+<!--    <img onclick="on()" src="https://khachsandep.vn/storage/files/Homestay/thiet-ke-homestay-02.jpeg" alt="Demo">-->
+<!--    -->
+<!--</div>-->
+<div class="w3-row-padding">
+    <div class="w3-half">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="Windows for the atrium">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="Bedroom and office in one space">
+        <img src="https://vatlieunhantao.com/wp-content/uploads/2023/09/mai-la-nhantao.jpg" style="width:30%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+    </div>
+</div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+    </div>
+    <div class="row">
+        <div class="col-8">col-8</div>
+        <div class="col-4">col-4</div>
+    </div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-8 col-lg-4">.col-md-8</div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-8">.col-md-4</div>
+</div>
+<div class="row">
+    <div class="col-md-3">.col-md-3</div>
+    <div class="col-md-3">.col-md-3</div>
+    <div class="col-md-3">.col-md-3</div>
+    <div class="col-md-3">.col-md-3</div>
+</div>
+
+
+</div>
+</body>
+<script>
+    // function on() {
+    //     document.getElementById("overlay").style.display = "block";
+    // }
+    // function off() {
+    //     document.getElementById("overlay").style.display = "none";
+    // }
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+</script>
+
+</html>
