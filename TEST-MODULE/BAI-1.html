@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+
+        .total {
+            width: 24.99999%;
+            float: left;
+            padding: 0 6px;
+        }
+
+        div.img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clearfix::after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 700px) {
+            .total {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .total {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<h2>Reponsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+<div class="total">
+    <div class="img">
+        <a href="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" target="_blank"> <img
+                src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg" alt="demo1"></a>
+        <div class="text">Add a description of the image here</div>
+    </div>
+</div>
+<div class="total">
+    <div class="img">
+        <a href="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" target="_blank"><img
+                src="https://demo.codegym.vn/web/15/gallery/img_forest.jpg" alt="demo2"></a>
+        <div class="text">Add a description of the image here</div>
+    </div>
+</div>
+<div class="total">
+    <div class="img">
+        <a href="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" target="_blank"><img
+                src="https://demo.codegym.vn/web/15/gallery/img_lights.jpg" alt="demo2"></a>
+        <div class="text">Add a description of the image here</div>
+    </div>
+
+
+</div>
+<div class="total">
+    <div class="img">
+        <a href="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" target="_blank"><img
+                src="https://demo.codegym.vn/web/15/gallery/img_mountains.jpg" alt="demo2"></a>
+        <div class="text">Add a description of the image here</div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+</body>
+</html>

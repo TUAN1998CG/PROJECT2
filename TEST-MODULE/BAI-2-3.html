@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BÀI 2-3</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: "side-bar menu"
+                        "side-bar content";
+            grid-template-rows: 2fr 4fr ;
+
+        }
+
+        .menu {
+            background-color: #8f3d3d;
+            padding-left: 60px;
+
+        }
+
+        .menu li {
+            grid-area: menu;
+            display: inline;
+            padding-left: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+        }
+
+        .side-bar {
+            grid-area: side-bar;
+            height: 100%;
+            background-color: #5f6062;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #4CAF50;
+        }
+
+        tr td {
+            border: 1px solid black;
+        }
+
+        .side-bar a {
+            text-decoration: none;
+            background-color: #dddddd;
+        }
+
+        .side-bar li {
+            list-style: none;
+            padding-top: 40px;
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <ul>
+            <a href="">
+                <li>Dashboard</li>
+            </a>
+            <a href="">
+                <li>Peformance</li>
+            </a>
+            <a href="">
+                <li>Revenues</li>
+            </a>
+            <a href="">
+                <li>Reporting</li>
+            </a>
+            <a href="">
+                <li>User</li>
+            </a>
+        </ul>
+    </div>
+    <div class="side-bar">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Tên</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+            <tr>
+                <td>VAN A</td>
+                <td>245</td>
+                <td>VANA@GMAIL.COM</td>
+                <td>HANOI</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>
