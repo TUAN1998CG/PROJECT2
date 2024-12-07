@@ -6,7 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import List from "./Components/PracticeRouter/List";
 import Home from "./Components/PracticeRouter/Home";
 import Add from "./Components/PracticeRouter/Add";
-import Detail from "./Components/PracticeRouter/detail";
+import Detail from "./Components/PracticeRouter/Detail";
 
 function App() {
     return (

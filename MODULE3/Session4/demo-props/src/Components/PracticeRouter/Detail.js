@@ -1,6 +1,6 @@
  import React, {useEffect, useState} from 'react';
  import {useParams} from "react-router-dom";
- import {productById} from "./Service/products";
+ import {productById} from "./Service/Products";
 function Detail (){
     const[product, setProduct] = useState({id:"" , name:""})
     const{id}=useParams()

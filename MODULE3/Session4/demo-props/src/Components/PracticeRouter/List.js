@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import {getAllProducts} from "./Service/products";
+import {getAllProducts} from "./Service/Products";
 
 
 

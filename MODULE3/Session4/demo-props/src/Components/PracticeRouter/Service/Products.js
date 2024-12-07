@@ -33,14 +33,6 @@ export function productById(id){
     }
     return null;
 }
-// export function deleteProduct(id){
-//     for (let i = 0; i < productList.length; i++) {
-//         if(productList[i].id == id){
-//             return productList[i];
-//         }
-//     }
-//     return null;
-// }
 
 
 
