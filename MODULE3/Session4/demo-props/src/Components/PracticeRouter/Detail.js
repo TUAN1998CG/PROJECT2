@@ -1,14 +1,20 @@
  import React, {useEffect, useState} from 'react';
  import {useParams} from "react-router-dom";
- import {productById} from "./Service/Products";
+ import {getAllProducts, productById} from "./Service/Products";
 function Detail (){
     const[product, setProduct] = useState({id:"" , name:""})
     const{id}=useParams()
     useEffect(()=>{
-        setProduct(()=>({
-            ...productById(id)
-        }));
+        // setProduct(()=>({
+        //     ...productById(id)
+        // }));
+        const fetchData = async () => {
+            let p = await productById(id);
+            setProduct(p)
+        }
+        fetchData()
     },[])
+
     return(
         <>
             <h3>Chi tiết</h3>

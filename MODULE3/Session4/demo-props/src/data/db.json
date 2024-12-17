@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nokia",
+      "manufactor": {
+        "id": 1,
+        "name": "Nokia"
+      },
+      "sim": 1,
+      "fe": [
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "manufactor": {
+        "id": 2,
+        "name": "Samsung"
+      },
+      "sim": 2,
+      "fe": "Bluetooth"
+    },
+    {
+      "id": "124412",
+      "name": "Anh N",
+      "manufactor": {
+        "id": 2,
+        "name": "Samsung"
+      },
+      "sim": "1",
+      "fe": [
+        "",
+        "Bluetooth",
+        "LTE"
+      ]
+    },
+    {
+      "id": "412412",
+      "name": "Xa Plus",
+      "manufactor": {
+        "id": 5,
+        "name": "HTC"
+      },
+      "sim": "2",
+      "fe": [
+        "",
+        "LTE",
+        "Bluetooth"
+      ]
+    }
+  ],
+  "manufactor": [
+    {
+      "id": 1,
+      "name": "Nokia"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "Iphone"
+    },
+    {
+      "id": 4,
+      "name": "Bphone"
+    },
+    {
+      "id": 5,
+      "name": "HTC"
+    },
+    {
+      "id": 6,
+      "name": "Xiaomi"
+    }
+  ]
+}

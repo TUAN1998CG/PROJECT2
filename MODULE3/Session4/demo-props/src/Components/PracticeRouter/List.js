@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import {getAllProducts} from "./Service/Products";
+import {deleteProduct, getAllProducts, searchProducts} from "./Service/Products";
 
 
 
@@ -11,30 +11,38 @@ import {getAllProducts} from "./Service/Products";
 function List() {
     const [products, setProducts] = useState([]);
     const [show,setShow] = useState(false);
-    const [productToDelete, setProductToDelete] = useState(null)
-    useEffect(() => {
-        const listProducts = getAllProducts()
-        setProducts(() => (
-            [
-                ...listProducts
-            ]
-        ))
-    }, []);
+    const [isLoading,setIsLoading] = useState(false);
+    const [productToDelete, setProductToDelete] = useState({id:"", name:""})
+    const searchRef = useRef();
+    useEffect( () => {
+      const fetchData= async ()=>{
+          const list= await  getAllProducts()
+          setProducts(list)
+      }
+      fetchData()
 
-    const handleShow = ()=>{
+    }, [isLoading]);
+
+    const handleShow = (product)=>{
         setShow((pre)=> !pre);
+        setProductToDelete(product)
     }
     const handleClose = () => {
         setShow((pre)=> !pre);
+
     }
-    const handleDelete = () => {
-        if (productToDelete) {
-            // Xóa sản phẩm khỏi danh sách
-            const updatedProducts = products.filter(product => product.id !== productToDelete.id);
-            setProductToDelete(updatedProducts);
-            handleClose(); // Đóng modal sau khi xóa
-            console.log(updatedProducts);
+    const handleDelete = async () => {
+        await deleteProduct(productToDelete.id)
+        setIsLoading((pre)=> !pre);
+        handleClose()
+    }
+    const handleSearch=()=>{
+        let searchName = searchRef.current.value;
+        const fetchData= async ()=>{
+            const list= await  searchProducts(searchName)
+            setProducts(list)
         }
+        fetchData()
 
     }
 
@@ -42,12 +50,17 @@ function List() {
         <>
             <h3>Trang danh sách sản phẩm</h3>
             <Link to={'/products/add'}>Add</Link>
+            <input ref={searchRef} type="text" name='searchname'/>
+            <button type='button' onClick={handleSearch}>Search</button>
             <table className={'table table-dark'}>
                 <thead>
                 <tr>
                     <th>STT</th>
                     <th>ID</th>
                     <th>NAME</th>
+                    <th>Manufeaturer</th>
+                    <th>Sim</th>
+                    <th>Feature</th>
                     <th>Detail</th>
                     <th>Action</th>
                 </tr>
@@ -58,12 +71,19 @@ function List() {
                         <td>{i + 1}</td>
                         <td>{p.id}</td>
                         <td>{p.name}</td>
+                        <td>{p.manufactor.name}</td>
+                        <td>{p.sim}</td>
+                        <td>{p.fe}</td>
                         <td><Link to={'/products/detail/'+ p.id} className={'btn btn-secondary'}>Detail</Link></td>
                         <td>
-                            <Button variant="primary" onClick={handleShow}>
+                            <Button variant="primary" onClick={()=>{
+                                handleShow(p)
+                            }}>
                                Delete
                             </Button>
+                            <Button>Edit</Button>
                         </td>
+
 
                     </tr>
                 ))}
@@ -74,7 +94,7 @@ function List() {
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                <Modal.Body>Bạn có muốn xoá {productToDelete.name}???!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
