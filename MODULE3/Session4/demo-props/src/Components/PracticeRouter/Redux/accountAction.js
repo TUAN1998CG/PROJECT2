@@ -1,18 +1,28 @@
+import {checkLogin} from "../Service/accountService";
 
 
-// account={
-//     username:"",
-//     password:"",
-//     role:""
-// }
+export function login(loginInfo ) {
 
-export function login(account ) {
+    // return{
+    //     type:"LOGIN",
+    //     payload: account
+    // }
+    return async (dispatch)=>{
+        const account=await checkLogin(loginInfo);
+        if(account!=null){
+            dispatch({
+                type:'LOGIN',
+                payload:account
+            })
+            return true;
+        }else {
+            console.log("Login khong thanh cong ")
+            return false;
+        }
 
-    return{
-        type:"LOGIN",
-        payload: loginInfo
     }
-}export function logout(account ) {
+}
+export function logout() {
 
     return{
         type:"LOGOUT",

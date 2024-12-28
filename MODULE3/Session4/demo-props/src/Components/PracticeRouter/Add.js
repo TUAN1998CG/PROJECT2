@@ -22,6 +22,7 @@ function Add() {
             const list = await getAllManufacturers()
             setManusList(list)
         }
+
         fetchData()
     })
     const handleSubmit = async  (value) => {

@@ -4,22 +4,32 @@ import "bootstrap/dist/css/bootstrap.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import {deleteProduct, getAllProducts, searchProducts} from "./Service/Products";
+import {useSelector} from "react-redux";
+import {getAllManufacturers} from "./Service/manufacservice";
 
 
 
 
 function List() {
+    const account=useSelector(state => state.user.account);
     const [products, setProducts] = useState([]);
+    const [manu, setManu] = useState([]);
     const [show,setShow] = useState(false);
     const [isLoading,setIsLoading] = useState(false);
     const [productToDelete, setProductToDelete] = useState({id:"", name:""})
-    const searchRef = useRef();
+    const searchNameRef = useRef();
+    const searchManuRef= useRef();
     useEffect( () => {
       const fetchData= async ()=>{
           const list= await  getAllProducts()
           setProducts(list)
       }
+        const fetchDataManu=async ()=>{
+            const list = await getAllManufacturers()
+            setManu(list);
+        }
       fetchData()
+        fetchDataManu()
 
     }, [isLoading]);
 
@@ -37,20 +47,26 @@ function List() {
         handleClose()
     }
     const handleSearch=()=>{
-        let searchName = searchRef.current.value;
+        let searchName = searchNameRef.current.value;
+        let searchManu = searchManuRef.current.value;
         const fetchData= async ()=>{
-            const list= await  searchProducts(searchName)
-            setProducts(list)
+            const list= await  searchProducts(searchName,searchManu)
+            setProducts(list )
         }
         fetchData()
-
     }
 
     return (
         <>
             <h3>Trang danh sách sản phẩm</h3>
             <Link to={'/products/add'}>Add</Link>
-            <input ref={searchRef} type="text" name='searchname'/>
+            <input ref={searchNameRef} type="text" name='searchname'/>
+            <select ref={searchManuRef}>
+                <option value={""}>--Chon--</option>
+                {manu.map(e=>(
+                    <option value={e.id}>{e.name}</option>
+                ))}
+            </select>
             <button type='button' onClick={handleSearch}>Search</button>
             <table className={'table table-dark'}>
                 <thead>
@@ -76,11 +92,11 @@ function List() {
                         <td>{p.fe}</td>
                         <td><Link to={'/products/detail/'+ p.id} className={'btn btn-secondary'}>Detail</Link></td>
                         <td>
-                            <Button variant="primary" onClick={()=>{
+                            {account&&((account.role=="ADMIN"))? <Button variant="primary" onClick={()=>{
                                 handleShow(p)
                             }}>
-                               Delete
-                            </Button>
+                                Delete
+                            </Button>:('')}
                             <Button>Edit</Button>
                         </td>
 

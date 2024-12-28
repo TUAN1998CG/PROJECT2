@@ -17,7 +17,7 @@ const productList=[
 export async function getAllProducts() {
     try{
 
-    const reponse = await axios.get(" http://localhost:8080/products");
+    const reponse = await axios.get(" http://localhost:8080/products?_sort=name&_order=asc" );
     return reponse.data;
 
     }catch(e){
@@ -27,10 +27,14 @@ export async function getAllProducts() {
     }
 
 }
-export async function searchProducts(searchName) {
+export async function searchProducts(searchName,manufacturID) {
+    let url =` http://localhost:8080/products?name_like=${searchName}&manufactor.id=${manufacturID}&_sort=name&_order=asc`
+    if(manufacturID==""){
+        url =` http://localhost:8080/products?name_like=${searchName}&_sort=name&_order=asc`
+    }
     try{
 
-    const reponse = await axios.get(" http://localhost:8080/products?name_like="+searchName);
+    const reponse = await axios.get(url);
     return reponse.data;
     }catch(e){
         console.log("Lỗi" + e)

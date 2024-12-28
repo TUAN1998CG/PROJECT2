@@ -1,18 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Nokia",
-      "manufactor": {
-        "id": 1,
-        "name": "Nokia"
-      },
-      "sim": 1,
-      "fe": [
-        "Bluetooth"
-      ]
-    },
-    {
       "id": 2,
       "name": "Samsung",
       "manufactor": {
@@ -23,31 +11,56 @@
       "fe": "Bluetooth"
     },
     {
-      "id": "124412",
-      "name": "Anh N",
+      "id": "123123",
+      "name": "Iphone Muoi",
       "manufactor": {
-        "id": 2,
-        "name": "Samsung"
-      },
-      "sim": "1",
-      "fe": [
-        "",
-        "Bluetooth",
-        "LTE"
-      ]
-    },
-    {
-      "id": "412412",
-      "name": "Xa Plus",
-      "manufactor": {
-        "id": 5,
-        "name": "HTC"
+        "id": 3,
+        "name": "Iphone"
       },
       "sim": "2",
       "fe": [
         "",
         "LTE",
         "Bluetooth"
+      ]
+    },
+    {
+      "id": "12345",
+      "name": "Nokia C",
+      "manufactor": {
+        "id": 1,
+        "name": "Nokia"
+      },
+      "sim": "2",
+      "fe": [
+        "",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": "123456",
+      "name": "Hat Te Ce",
+      "manufactor": {
+        "id": 5,
+        "name": "HTC"
+      },
+      "sim": "1",
+      "fe": [
+        "",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": "1234567",
+      "name": "Xiao Mi",
+      "manufactor": {
+        "id": 6,
+        "name": "Xiaomi"
+      },
+      "sim": "1",
+      "fe": [
+        "",
+        "ZOOMCAMERA"
       ]
     }
   ],
@@ -75,6 +88,20 @@
     {
       "id": 6,
       "name": "Xiaomi"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "username": "tuannt",
+      "password": "123",
+      "role": "USER"
     }
   ]
 }
